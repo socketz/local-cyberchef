@@ -36,7 +36,7 @@ if res.ok:
 
     # Remove and rename new html file
     print("Renaming files...")
-    Path('CyberChef.html').unlink()
+    Path('CyberChef.html').unlink(missing_ok=True)
     for html_f in Path('.').glob('*.html'):
         html_f.rename('CyberChef.html')
 
